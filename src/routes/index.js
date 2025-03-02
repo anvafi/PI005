@@ -23,8 +23,23 @@ router.get("/ruta/ruta/ruta/ruta", (req, res) => {
 });
 router.post("/rutaPOST", (req, res) => {
   console.log("acceso a POST");
-  res.send("hola, respuesta");
-  req.body = "test de request body";
+  res.send(`${req.body.nombre} , jesucristo murio por tus pecados`);
+  //req.body = "test de request body";
+  //res.redirect("http://127.0.0.1:5500/frondend/index.html");
+  // res.json({
+  //   id: "dinerico",
+  //   nombre: req.body.nombre,
+  //   apellidos: req.body.apellidos,
+  //   numero_tarjeta: req.body.numero_tarjeta,
+  //   fecha_caducidad: req.body.fecha_caducidad,
+  //   cvv: req.body.cvv,
+  // });
+  console.log(req.body);
+  console.log(req.body.nombre);
+  console.log(req.body.apellidos);
+  console.log(req.body.numero_tarjeta);
+  console.log(req.body.fecha_caducidad);
+  console.log(req.body.cvv);
 });
 router.post("/rutaPOST/rutaPOST", (req, res) => {
   console.log("acceso a POST");
