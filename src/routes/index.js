@@ -34,12 +34,12 @@ router.post("/rutaPOST", (req, res) => {
   //   fecha_caducidad: req.body.fecha_caducidad,
   //   cvv: req.body.cvv,
   // });
-  // console.log(req.body);
-  // console.log(req.body.nombre);
-  // console.log(req.body.apellidos);
-  // console.log(req.body.numero_tarjeta);
-  // console.log(req.body.fecha_caducidad);
-  // console.log(req.body.cvv);
+  console.log(req.body);
+  console.log(req.body.nombre);
+  console.log(req.body.apellidos);
+  console.log(req.body.numero_tarjeta);
+  console.log(req.body.fecha_caducidad);
+  console.log(req.body.cvv);
 });
 router.post("/rutaPOST/rutaPOST", (req, res) => {
   console.log("acceso a POST");
