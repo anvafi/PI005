@@ -14,7 +14,9 @@
     "nodemon": "^3.1.9"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "openai": "^4.97.0"
   },
-  "description": ""
+  "description": "pi009"
 }

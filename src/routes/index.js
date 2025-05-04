@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { default: OpenAI } = require("openai");
 const router = Router();
 
 router.get("/", (req, res) => {
@@ -60,6 +61,25 @@ router.post("/rutaPOST/rutaPOST/rutaPOST/rutaPOST/rutaPOST", (req, res) => {
   console.log("acceso a POST");
   res.send("hola, respuesta 5");
   req.body = "test de request body";
+});
+
+router.post("/rutaPOST_GTP", (req, res) => {
+  const openai = new OpenAI({
+    apiKey: "",
+  });
+  const completion = openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    store: true,
+    messages: [
+      {
+        role: "developer",
+        content: +req.body.pregunta,
+      },
+    ],
+  });
+  completion.then((result) => {
+    res.send(`${req.body.nombre} , jesucristo murio por tus pecados`);
+  });
 });
 
 module.exports = router;
