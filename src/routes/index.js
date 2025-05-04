@@ -65,7 +65,8 @@ router.post("/rutaPOST/rutaPOST/rutaPOST/rutaPOST/rutaPOST", (req, res) => {
 
 router.post("/rutaPOST_GTP", (req, res) => {
   const openai = new OpenAI({
-    apiKey: "",
+    apiKey:
+      "sk-projA01YLls1WCQ9_zTQpirVf8JHV24oD4EADNwpJI1KEmshxdrTabLbqotlxCyQhOqVziN0RsIuvkT3BlbkFJZg5WK-tmO1eWreICHLizooH85-LR8O9LmJycPI8Fn9NffWFIEfJsp75ecfy5VAejNKk_f8NT4A",
   });
   const completion = openai.chat.completions.create({
     model: "gpt-4o-mini",
@@ -73,7 +74,7 @@ router.post("/rutaPOST_GTP", (req, res) => {
     messages: [
       {
         role: "developer",
-        content: +req.body.pregunta,
+        content: "Pregunta" + req.body.pregunta,
       },
     ],
   });
