@@ -66,7 +66,7 @@ router.post("/rutaPOST", (req, res) => {
 router.post("/rutaPOST_GPT", (req, res) => {
   const openai = new OpenAI({
     apiKey:
-      "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",
+      "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",
   });
   const completion = openai.chat.completions.create({
     model: "gpt-4o-mini",
