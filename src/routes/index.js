@@ -63,7 +63,7 @@ router.post("/rutaPOST", (req, res) => {
 //   req.body = "test de request body";
 // });
 
-router.post("/rutaPOST_GTP", (req, res) => {
+router.post("/rutaPOST_GPT", (req, res) => {
   const openai = new OpenAI({
     apiKey:
       "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",
