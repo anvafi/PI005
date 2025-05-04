@@ -79,7 +79,7 @@ router.post("/rutaPOST_GTP", (req, res) => {
     ],
   });
   completion.then((result) => {
-    res.send(`${req.body.nombre} , jesucristo murio por tus pecados`);
+    res.send(result.choices[0]);
   });
 });
 
