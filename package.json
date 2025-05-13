@@ -16,7 +16,8 @@
   "dependencies": {
     "express": "^4.21.2",
     "cors": "^2.8.5",
-    "openai": "^4.97.0"
+    "openai": "^4.97.0",
+    "mysql": "^2.18.1"
   },
   "description": "pi009"
 }

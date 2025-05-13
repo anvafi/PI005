@@ -14,6 +14,7 @@ app.use(cors());
 
 //super rutas aquí
 app.use(require("./routes/index"));
+app.use("/api/MySQL", require("./routes/index"));
 
 app.listen(app.get("port"), () => {
   console.log(`hola desde el puerto: ${app.get("port")}`);
