@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { default: OpenAI } = require("openai");
 const router = Router();
-const mysql = require("mysql");
+const mysql = require("mysql2");
 
 router.get("/", (req, res) => {
   console.log("estan dentro");
