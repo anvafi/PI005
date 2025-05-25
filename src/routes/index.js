@@ -38,7 +38,7 @@ router.post("/rutaPOST", (req, res) => {
 router.post("/postSQL", (req, res) => {
   let post = req.body;
   let sql =
-    "INSERT INTO `usuarios` (`usuario`, `pass`) VALUES ('" +
+    "INSERT INTO `usuario` (`usuario`, `pass`) VALUES ('" +
     req.body.usuario +
     "', '" +
     req.body.pass +
