@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 });
 router.get("/getSQL", (req, res) => {
   console.log(db);
-  let sql = "SELECT * FROM usuarios";
+  let sql = "SELECT * FROM usuario";
   let query = db.query(sql, (err, result) => {
     console.log(result);
     res.json(result);
@@ -102,10 +102,10 @@ router.post("/rutaPOST_GPT", (req, res) => {
 });
 
 const db = mysql.createConnection({
-  host: "sql7.freemysqlhosting.net",
-  user: "sql7715965",
-  password: "Fly2lHMPhD",
-  database: "sql7715965",
+  host: "fdb1028.awardspace.net",
+  user: "4633478_pi10",
+  password: "G32T2Nf]6&]?YBu",
+  database: "4633478_pi10",
 });
 db.connect((error) => {
   if (error) {
