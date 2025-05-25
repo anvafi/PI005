@@ -37,7 +37,7 @@ router.post("/rutaPOST", (req, res) => {
 });
 router.post("/postSQL", (req, res) => {
   let post = { usuario: "test", pass: 12345 };
-  let sql = "INSERT INTO usuarios SET ?";
+  let sql = "INSERT INTO usuario SET ?";
   let query = db.query(sql, post, (err, result) => {
     console.log(result);
     res.json(result);
