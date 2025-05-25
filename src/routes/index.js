@@ -36,8 +36,13 @@ router.post("/rutaPOST", (req, res) => {
   res.send(`${req.body.nombre} , jesucristo murio por tus pecados`);
 });
 router.post("/postSQL", (req, res) => {
-  let post = { usuario: "usuario001", pass: 12345 };
-  let sql = "INSERT INTO usuario SET ?";
+  let post = req.body;
+  let sql =
+    "INSERT INTO `usuarios` (`usuario`, `pass`) VALUES ('" +
+    req.body.usuario +
+    "', '" +
+    req.body.pass +
+    "')";
   let query = db.query(sql, post, (err, result) => {
     console.log(result);
     res.json(result);
