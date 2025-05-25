@@ -44,8 +44,12 @@ router.post("/postSQL", (req, res) => {
     req.body.pass +
     "')";
   let query = db.query(sql, post, (err, result) => {
-    console.log(result);
-    res.json(result);
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(result);
+      res.json(result);
+    }
   });
 });
 //req.body = "test de request body";
