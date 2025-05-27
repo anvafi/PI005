@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body background="idx2.gif">
+  <!-- <body background="idx2.gif"> -->
     <p>Ruta GET</p>
     <!-- <form action="https://pi005.onrender.com/ruta" method="get">
         Nombre<input type="text" name="nombre" /><br>
@@ -19,7 +19,7 @@
         CVV<input type="text" name="cvv" /><br>
     <button type="submit">enviar</button> -->
     <p>Ruta POST</p>
-    <form action="https://pi005.onrender.com/postSQL" method="post">
+      <form action="https://pi005.onrender.com/postSQL" method="post">
       Nombre: <input type="text" name="usuario" /><br />
       Contraseña: <input type="text" name="pass" /><br />
 
@@ -32,7 +32,11 @@
         Fecha de caducidad<input type="text" name="fecha_caducidad" /><br>
       <form action="https://pi005.onrender.com/rutaPOST" method="post">
         CVV<input type="text" name="cvv" /><br> -->
-      <button type="submit">enviar</button>
+      <form action="http://127.0.0.1:5500/postSQL" method="POST">
+      Username_local: <input type="text" name="usuario" /><br />
+      Pass_local: <input type="text" name="pass" /><br />
+      <button type="submit">Enviar local</button>
+      <!-- <button type="submit">enviar</button> -->
     </form>
   </body>
 </html>
