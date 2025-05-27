@@ -43,8 +43,8 @@ router.get("/getSQL", (req, res) => {
 //POST
 router.post("/postSQL", (req, res) => {
   console.log("hola");
-  let post = { usuario: "usuarioX", pass: 12123 }; //Valores de testeo, se sustituyen por el contenido del POST
-  //let post = req.body;
+  //let post = { usuario: "usuarioX", pass: 12123 }; //Valores de testeo, se sustituyen por el contenido del POST
+  let post = req.body;
   let sql =
     "INSERT INTO `usuarios` (`usuario`, `pass`) VALUES ('" +
     req.body.usuario +
