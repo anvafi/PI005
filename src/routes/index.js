@@ -9,9 +9,11 @@ const db = mysql.createConnection({
   // user: "4633478_pi10",
   // password: "G32T2Nf]6&]?YBu",
   // database: "4633478_pi10",
+  //
   // host: "localhost",
   // user: "root",
   // database: "4633478_pi10",
+  //
   host: "srv1100.hstgr.io",
   user: "u815170294_test_user",
   password: "s1*S=nN#",
