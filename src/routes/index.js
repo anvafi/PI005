@@ -5,13 +5,17 @@ const mysql = require("mysql2");
 //Create MySQL conexion
 const db = mysql.createConnection({
   host: "fdb1028.awardspace.net",
+  //port: "3306",
   user: "4633478_pi10",
   password: "G32T2Nf]6&]?YBu",
   database: "4633478_pi10",
+  // host: "localhost",
+  // user: "root",
+  // database: "4633478_pi10",
 });
 db.connect((error) => {
   if (error) {
-    console.log("error: " + error);
+    console.log("error_db: " + error);
   } else {
     console.log("conexion establecida");
   }
@@ -24,7 +28,7 @@ router.get("/", (req, res) => {
 
 //GET
 router.get("/getSQL", (req, res) => {
-  // console.log(db);
+  console.log(db);
   let sql = "SELECT * FROM usuarios";
   let query = db.query(sql, (err, result) => {
     console.log(result);
@@ -35,8 +39,8 @@ router.get("/getSQL", (req, res) => {
 //POST
 router.post("/postSQL", (req, res) => {
   console.log("hola");
-  // let post = { usuario: "usuarioNODE", pass: 54321 }; //Valores de testeo, se sustituyen por el contenido del POST
-  let post = req.body;
+  let post = { usuario: "usuarioX", pass: 12123 }; //Valores de testeo, se sustituyen por el contenido del POST
+  //let post = req.body;
   let sql =
     "INSERT INTO `usuarios` (`usuario`, `pass`) VALUES ('" +
     req.body.usuario +
