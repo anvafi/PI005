@@ -4,20 +4,20 @@ const mysql = require("mysql2");
 
 //Create MySQL conexion
 const db = mysql.createConnection({
-  host: "fdb1028.awardspace.net",
-  //port: "3306",
-  user: "4633478_pi10",
-  password: "G32T2Nf]6&]?YBu",
-  database: "4633478_pi10",
+  // host: "fdb1028.awardspace.net",
+  // //port: "3306",
+  // user: "4633478_pi10",
+  // password: "G32T2Nf]6&]?YBu",
+  // database: "4633478_pi10",
   //
   // host: "localhost",
   // user: "root",
   // database: "4633478_pi10",
   //
-  // host: "srv1100.hstgr.io",
-  // user: "u815170294_test_user",
-  // password: "s1*S=nN#",
-  // database: "u815170294_test_db",
+  host: "srv1100.hstgr.io",
+  user: "u815170294_test_user",
+  password: "s1*S=nN#",
+  database: "u815170294_test_db",
 });
 db.connect((error) => {
   if (error) {
